@@ -1,0 +1,106 @@
+		RULES 
+	1.penamaan kelas menggunakkan cammelcase [nameUganda]	
+	2.penamaan fungsi,variable dan parameter menggunakkan snakecase [name_u]	
+	3.enkapsulasi ,single responsibility principle,composition over inheritance
+		TODO
+	#buat jadi error didalam attr class htmlnya berupa dinclass dinval 1&2 defined value 10 variant    
+	#.mapping the styles
+	#.make a 37 definedd classes
+	#.make a 10 variants
+	#security of your code 
+	#kapan pakai css.escape 
+	#reformat for cr- prefix 
+	#reformat for dicts function it sould can #destructure {functions[css],dicts}
+	#jika terjadi nama class yang sama persis maka gunakkan yang terakhir  misal mt-37 mt-37 maka yang digunakkan yang terakhir dan juga kalau ada bg-blue-900 bg-&color&-*#ddd* jangan diubah bila cssnya main di value terakhirnya ini menjadikan 
+	#tambahi validator ketika user salah ketik maka langsung error dan bisa diketahui errornya baris ke berapa 
+	#refactor untuk merapikan kode menjadi fitur[dinval 1&2,dinclass],prop, + comentar ,#if u are using vscode please install bettercoment extension to see the magic happen 
+	
+		ON PROGRESS
+	#define 10 variants   #generate_styles() { line 622	
+	#dinamic val &&
+	#ganti **** by developer to 37 defined class value by developer 
+	#refactor kode di dalam class crimsonStyle buat jadi rapi dan terstruktur dan berdasarkan fitur diberikan koment what start what end dan terapkan berdasarkan rules 
+	 
+	#refactor dinclass make it core logic[mass style_translators<37,10variant,dinval1&2,pure_css> algoritm] move in diferent function mass_five_style_translators({class_name,values:"px-5 py-4 brdr-&radius&-*8px* etc"}) 
+
+	!!implementing SRP [132]
+		-[132] crimsonStyle class
+		DONE
+	
+	#.dinamic val **	
+	#dinamic class when translate class into css[37 defined class, variants[v]] that has been generated in the style tag just cath it in there, for acuraccy when admin or user want to change UNIT value like [rem,px,em etc] THAT IS EASY FOR EVERYBODY AND THEY DONT FEEL DIFICULT TO CHANGE IT in the functions that generate it 
+	#prevent user from inserting more than 37 definedd class
+	#check in dinclass to prevcent bug appear	
+	#dinamic class val
+	#dinamic class val variant like blue-50
+	#mengidentifikasi ada berapa style penulisan yang boleh digunakkan didalam dinamic class 5[ dinval 1,dinval 2,purecss propval,37definedd value,10 variant 10-90]
+	#lakukan solving #13
+	#mengerjakan algoritma untuk mengambil value terakhir dari dinamic class jika ada lebih dari 1 yang ditemukan didalam element yang mana classnya terdapat lebih dari 1 dynamic class 	
+		SOON
+	#blend mode
+	#object-fit
+	#text-shadow
+	#hover etc [generated into class when it appear in the classlists]
+	#regex css https://youtu.be/Myo-yNGpVc8
+	#box-&shadow&-*12px 12px 12px #ddd *
+	#mobile first utility md lg 
+
+		USER STORY
+	1.user can use dinamic val && and ** 
+	2.user can use regex in css via dinamic val [no it is imposible because dinamic val is translated into propval in pure css]	
+	3.user can type in class of html it will automatic transform it to css class
+	4.user bisa menggunakkan fungsi css() didalam class yang mana css() hanya css biasa dan userbebas mau pakai css apa misal user bisa memakai literally semua yang ada pada css termasuk css regex dan didalamnya user bisa bebas pakai apapun dinval 1&2 defined value any 10 variant color
+
+		DRAWS THE IDEA 	
+
+	1.regex   .dom[class^="card"][class*="product"][class$="end"] sudah dijawab di user story #4	
+	2. user story#3   card-*py-5 px-*0.25rem* * it will translating by js into .card{ padding-block:5px; padding-inline:0.25rem; }
+	3.dinval 1&2 saat sudah ditentukan dan ditranslate ke css murni lalu dinval 1&2 akan ditranslate juga ke classname css lalu diescape menggunakkan CSS.escape() lalu saat dinval 1&2 dimasukkan oleh user untuk menghindari duplikat maka cari dulu di dalam inline cssnya apakah ada class atas nama dinval 1&2 dengan regex polanya mengikuti hasil yang telah diescape oleh fungsi CSS.escape() untuk mencocokkan apakah sudah ada jika sudah ada ? pakai aja classnya : ditranslate jadi classname dan propval lalu di append ke dalam inline css atau style tag yang ada di dalam file html  
+	4. user story#4 css(.card{color:blue;px-5 py-*1.25rem* shadow-blue-50 })
+	5.mungkin dinamyc class pakai ^ [sangat bisa ]
+	6.dinamic class saat menangkap semua utility ataupun semua jenis style css maka ia hanya akan di translate ke css property:value; biasa
+	7.di dalam format dicts terdapat properties second itu untuk pengembangan lebih lanjut 
+		DRAWS THE CONCLUSION
+
+		#1dinamic class
+
+	untuk [DRAWS:#1/CONCLUSION] yang terakhir jika mem push ke dalam array lalu ambil array terakhir untuk mengetahui dynamic class yang terakhir lalu dicari menggunakkan dynamic regex maka akan terjadi error dan bingung karena ia akan mencari nama yang sama karena namanya mungkin ada lebih dari 2 atau sama persis solusinya push semua dinamic class dengan pola /([\w]+-\*\s\S\*)/ lalu dipush kedalam array lalu ambil array terakhir lalu diproses ditranslasikan ke dalam pure css .classname{what-prop:some value;} 	
+
+	[DRAWS:#1/CONCLUSION jika mau kekeh menggunakkan * sebagai api  [DRAWS:#1/CONCLUSION] maka itu tidak akan mungkin berhasil karena tidak mungkin bisa mengambil semua isi yang ada diantara ** yang mana [DRAWS:#1] itu didalamnya terdapat 3 gaya penulisan css dinval 1 & 2 definedd class propval dll ubah dinval yang tadinya menggunakkan * jadi ^ agar bisa diproses lebih lanjutan
+
+	[DRAWS:#1/CONCLUSION] memiliki [3] yaitu dinval 1, dinval 2, propval ,definedd value ,apa yang tercantum didalam kitab dicts 
+
+	[DRAWS:#1/CONCLUSION] memiliki urutan jadi classnya disort lagi berdasarkan pola pengerjaan developer const classes=cardslash-^ mt-*4rem* trans:uppercase; bg-&clip&-*fixed* mt-*23rem* box-&shadow&-*12px 12px 12px 12px #ddd * background:red; bg-blue-50 mt-37 mb-16 mb-*56rem* m-&top&-*45px* ^ maka akan disort berdasarkan algoritma program yang di kerjakan developer 1.dinval 1[1] ,2.dinval 2[2] ,3.pure css[3] ,4.37 defined class by developer[4] ,5.all 10 variants[5] jadi skor CSS specificity seperti contoh diatas [nilai specificitynya]
+
+
+	[DRAWS:#1/CONCLUSION] translasi menuju pure css : dinval 1&2[v]  purecss propval [v] 37definedd value [v] 10 variant 10-90 
+
+	[DRAWS:#1/CONCLUSION] spesifisity karena urutannya sesuai pengerjaan developer 
+
+		#2.dinval 1
+
+	[DRAWS:#2/CONCLUSION] kalau menggunakkan filter maka tidak bisa dilakukan kemungkinan karena beberapa data melewati modify dan didalam filter method ?lakukan diluar filter method
+
+	[DRAWS:#2/CONCLUSION] bisa cuman tadi agak kurang fokus memperhatikan kode karena tidak ada trim dan penyesuaian sedikit di classnamenya 
+
+	[DRAWS:#2/CONCLUSION] di styletag itu kosong lalu pas user ngetik misal mt-*24rem* kalau dicheck pake regex gak bisa karena pasti kosong maka dicatch pakai setmap ?cocokkan apakah stylenya tidak ada di catch?tambahkan ke catch dan ke styletag
+
+
+
+
+			#FAQ
+			1.kenapa kodenya sangat banyak dan kayak regex hell dan spagety
+				[answer]1.untuk saya belajar tentang dom dan saya mengumpulkan lebih dari 1 solusi untuk memecahkan problem yang saya hadapi karena memiliki banyak sudut pandang tentang cara solve problem adalah keinginan admin selaku developer 
+			2.apakah akan dirapikan
+				[answer]2.iya akan saya rapikan ketika saya push ke github saya akan buat 2 kopi yang satu untuk orang belajar kalau nemu repo saia yang satu untuk projek pribadi 
+			3.kenapa kode yang dikomentari gk dihapus 
+				[answer]3.iya karena kode yang dikomentari merupakkan rekam jejak admin dalam mendebug kode jadi ya untuk belajar dan agak sayang aja kalau dihapus :v 
+			4.pilih yang mana dari sekian solusi 
+				[answer]4.yang mudah untuk dipahami oleh orang awam itulah solusi yang terbaik
+=======================alur aplikasi atau flowchart
+	====kode teks [chart/[\d]+/g]
+	1.scandoms
+		-dia akan menangkap semua termasuk kelass yang belum dinormalisasi nah apakah kita bisa menormalisasi hasil tangkapan dari scandoms lalu diteruskan ke dalam fungsi nah apakah fungsi bisa menormalisasikan hal tersebut atau dengan kata lain merubah struktur dom dari element html tersebut [sangat bisa]
+	2.dinclass 
+		-dinclass simpan di catch agar jika ada yg sama di element yang lain maka jangan di buat
+		-implement fitur ambil yang terakhir untuk dinamic class yang punya nama sama tapi disatu element

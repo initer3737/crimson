@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="./lib/style.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cardslash">
+        <h2>slasher</h2>
+    </div>
+    <h4 class="na">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore cum sapiente facilis quae numquam adipisci illo modi sit odio itaque alias laborum atque, consequatur soluta necessitatibus consequuntur praesentium ipsum officia? nanana </h4>
+    <div id="debuger">
+        <p>hai saya adalah debuger!!! yoroshiku ne oni chan!!</p>
+    </div>
+    <h3 class="debug_dinval1 bg-* orange *">debug dinval1</h3>
+    <h2 style="border: 2px solid salmon;">Lorem ipsum dolor sit amet consectetur.</h2>
+    <h3 class="dom">halo i am dom</h3>
+    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, earum exercitationem, harum ipsa quaerat enim aperiam omnis odit aut temporibus repudiandae? Temporibus est pariatur eaque doloremque ab harum iure, magnam fuga laboriosam necessitatibus distinctio?</h5>
+    <h3>air mengalir , mata menatap kosong , sang maha raja</h3>
+    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque doloribus a dolore!</h4>
+    <script>
+        const classes6 = "card-^padding:12px; bg-&color&-*#ddd* mt-6^ pin-^mt-5 mt-*23rem* ^";
+const regex = new RegExp("card-[^](.*)[^](?=\\s|$)", "gs");
+
+// console.log(classes6.match(regex)[0]);
+
+        const dinval="mb-*12rem* bg-&clip&-*fixed*"
+        // console.log('dinval is ',CSS.escape(dinval))
+           const dinval2=CSS.escape(dinval).match(/[\w]+-\\\*[^*]*?\\\*/g)
+        //    console.log(dinval2)
+        const dom=document.querySelector(".dom")
+        // solution1 
+        // ? use the var to store value and append to style dom
+            styles="border:2px solid red;color:blue;background:black;"
+        // dom.style="border:4px solid blue;padding:24px;"
+    
+        dom.setAttribute("style",styles)
+        // solution 2
+        dom.style["paddingBlock"]="40px"
+        dom.style["paddingInline"]="20px"
+
+        const styleapi="text-*#fff* bg-*#ddd* shadow-*blue 2px 2px* bg-*darken*"
+           ,all_match=styleapi.matchAll(/([\w]+)-\*([^*]+)\*/g)
+           ,match=styleapi.match(/([\w]+)-\*([^*]+)\*/g)
+            // ? solution 1 is safe
+           for(const match of all_match){
+
+            //    console.log(match[2])
+           }
+        //    ? solution 2 is duplicated
+           match.map(match=>{
+                const regex=match.match(/([\w]+)-\*([^*]+)\*/)
+                // console.log(regex[2])
+           })
+
+           const p={
+             'pt-makan':"makan"
+           }
+          
+// solution for dinamic classes
+// dinamic classes must have 1 if more than 1 will use the last
+//behind the screne it just make a class and translate all the string between * become a regular style css like pt become padding-top:4px; etc 
+const classes="card-*padding:12px 1.12rem; text-transform:capitalize; text-align:center; mt-4 mx-3 pt-5 mb-*0.10rem * mt-*12rem* bg-&clip&-*fixed* bg-&color&-*#ddd* * cardslash-*padding:112px 1.12rem; mv-*13rem* text-transform:capitalize; text-align:center; mt-4 mx-3 pt-5 mb-*0.10rem * mt-*12rem* bg-&clip&-*fixed* bg-&color&-*#ddd* *  mt-*0.25rem* cardslash-* mt-*1.24rem* * cardslash-^mt-*4rem* trans:uppercase; bg-&clip&-*fixed*^ cardslash-^ mt-*4rem* trans:uppercase; bg-&clip&-*fixed* mt-*23rem* box-&shadow&-*12px 12px 12px 12px #ddd bg-blue-50* ^"
+// cardslash-\*(.*?)\*
+const regexcardslash=/cardslash-\^[\s\S]+?\^/g
+
+for(const resultat of classes.matchAll(regexcardslash)){
+    const result=resultat 
+    // console.log(result)
+}
+
+const dicts={
+    mt:'margin-top',
+    mb:'margin-bottom',
+    mx:'margin-inline',
+    bg:"background"
+}
+
+const styleTag=`
+.mt-4{
+    margin-top:4px;
+}
+.mx-3{
+    margin-inline:3px;
+}
+`
+//goals turn into 
+const goal=`
+// in style tag has been generated that class[37 promised class]
+
+.card{
+    padding:12px 1.12rem;
+    margin-top:4px;
+    margin-botom:0.10rem;
+    text-transform:capitalize;
+}
+` 
+
+const solvings=`
+1.ambil semuanya dengan grouping [v]
+2.grouping untuk mengidentifikasi [v]
+3.cari kriteria yang sudah ada di style tag [promised class] [v]
+4.bedakan promised value dan dinamic value[sudah ada di dicts][v] \w+-\*[^\*]\* [pola ini merupakkan dinamic value 1]
+5.ambil kriteria style murni css example must be /(\w+):(\s\S);/[v]
+6.promised class[\w]+-[0-9]+[v]
+7.untuk pencegahan agar user tidak ngawur dalam menulis css misal jika user menulis mx-50 yang wichis gak ada di style tag karena yang dijanjikan cuma sampai 37 maka jika melebihi maka dikembalikan apa adanya atau gak ngefek pada css[v]
+8.pure css prop:val;[v] promised class[v] dinamyc val1 *[v] dinamic val2 &&[v] [untuk mengerjakan dinamic class]
+9.bug appear if 2 dinamyc class appear it should use the last one
+10. num #9 ngapain harus ada lebih dari 1 class dinamyc kan harusnya cuma 1 jadi dibuat kosong aja jadi gak bakal ngaruh kecuali kalau class dynamicnya cuman 1 itu syaratnya
+11.class dynamic itu syaratnya dia akan diidentifikasi undefined oleh dicts dan punya pola ^ [sufix]
+12.bagaimana jika cocokan untuk dinamyc class | ambil yang terakhir | gunakkan dynamic regex untuk mengambil value between *
+13.apakah css.escape bisa mentranslate regex / membuat mb-*12rem* menjadi mb-\*12rem\* ? translate regex tidak bisa karena regex itu mencari pola sebuah string , css.escape bisa men escape seperti statement solvings num #13  [v]
+14.important question  to build dynamic feature ?apakah sudah ada atau tidak 
+15.dynamic val 1&&2 harus check dulu di style tag apakah sudah ada ?gunakkan classnya:buat classnya karena sudah diescape maka regexnya menyesuaikan escape valuenya 
+16.belajar jsdocs untuk mendeskripsikan fungsi agar admin tidak lupa fungsi ini buat apaan kalau lupa maka admin harus debug lagi buat cari tahu itu kode / fungsi buat apaan
+17.apa yang terjadi bila pola regexnya tidak ditemukan pada saat di split dsb 
+18.kalau solving num #17 terjadi eror maka cegah erornya
+19.jika ada eror di cssnya yang dikirim via js ataupun inline css maka dia akan dianggap invalid property name
+`
+// select the dynamic class but validate first it must be undefined for dicts |  the last will be processed
+// use the dynamic regex for better acuration
+// ? make everything a lazy 
+const regex3=/([\w]+)-\*([\s\S]*?)\*/g
+
+// kode dibawah sampai tanda ** bug karena dia[dynamic regex] akan bingung sebab jika ada dynamic class yang namanya sama maka dia akan ambil semuanya bukan solusi yang tepat 
+    const lastDinamycClasses=[]
+for(const resultat of classes.matchAll(regex3)){
+        // dia adalah dynamic class jika undefined
+        const validate=dicts[resultat[1]]
+        if(validate == undefined){
+                lastDinamycClasses.push(resultat[1])
+            }
+            // console.log(validate) 
+            // console.log(resultat) 
+        }
+        // use the last of dynamic class using dynamic regex
+        const lastDinamicClass=String(lastDinamycClasses.slice(-1))
+// console.log(lastDinamicClass)
+// didalam new RegExp ? \ untuk meng escape stringnya lalu \s untuk menulis regex literalnya \s jadi literal s sedangkan \\s akan jadi \s \ yang pertama untuk meng escape stringnya lalu yang selanjutnya adalah regex literal
+// bukan solusi yang sebenarnya
+for(const resultat of classes.matchAll(new RegExp(`${lastDinamicClass}-\\*(.*)\\*(?=\\s|$)`,'gs'))){
+    const resultats=resultat[0]
+        // console.log(resultats)
+        // console.log("mised")
+}
+//**[bug]
+
+// aproved by admin
+const regexs=/(\w+)-[\^\s]([^\^]+)[\s\^$]/gi
+
+const lastDinclassdatas=[]
+const lastDinclassresult=classes.match(regexs)
+lastDinclassresult?.map(val=>{
+    lastDinclassdatas.push(val)
+    // console.log(val)
+})
+// ?what happen if lastDinclassdatas is null or []
+const lastDinclassdata=String(lastDinclassdatas.slice(-1))
+
+// console.log("last dinclass ",lastDinclassdata)
+    // ? it generate class then append to style tag like
+    // .card{prop:value;}
+    // solution 1 : use function to generate it
+        const generateStyle=({propVal,classname})=>{
+            const result=`
+                .${classname}{
+                    ${propVal}
+                }
+            `
+            console.log(result)
+        }
+    // solution 2 : use interpolate string 
+        let propVal=''
+        let className=''
+            // solution ganti classe classes.matchAll dengan last dynamic class
+    for(const result of lastDinclassdata.matchAll(regexs)){
+        // translate it to regular css but not in here it generate when it done 
+        // kesalahannya pasti ada diregexnya
+        // console.log("result ",result)
+         className=result[1]
+            // console.log(result[2])
+            // contain all value between dinamic classes
+            ,groupnum2=result[2]
+            // console.log(groupnum2)
+            //dinamic value yang ke 1 tidak mengandung pola \w+-\&[^*]+?\&-\*[^*]\*
+            ,dinamicVal=groupnum2.matchAll(/[\w]+-\*[\s\S]+\*/g)
+            for(const result of dinamicVal){
+                    // console.log(result[0])
+                    // check for 2 dinamic | insert dinamicval
+                    const resultat=result[0] 
+                    // dinamic val 1
+                    const dinamicval1=resultat.matchAll(/([\w+]+)-\*([^*]+)\*/g)
+                    for(const resultat of dinamicval1){
+                        const validatedata=dicts[resultat[1]]
+                        if(validatedata != undefined){
+                            // fill it
+                            propVal+=`${validatedata}:${resultat[2]};`
+                            // console.log(validatedata)
+                        }
+                        // console.log(resultat)
+                    }
+                    // dinamic val 2
+                    const dinamicval2=resultat.matchAll(/([\w+]+)-\&([\w]+)\&-\*([^*]+)\*/g)
+                    for(const resultat of dinamicval2){
+                        const validatedata=dicts[resultat[1]]
+                        if(validatedata != undefined){
+                            // fill it
+                            propVal+=`${validatedata}-${resultat[2]}:${resultat[3]};`
+                            // console.log(validatedata)
+                        }
+                        // console.log(resultat)
+                    }
+                }
+            const purePropValCss=groupnum2.match(/[\w|\w-\w]+\:[^:]+[;$]/g)
+                purePropValCss.map(val=>{
+                    // isi propval ke dalam variable propval
+                    propVal+=val
+                })
+            // check for existed class in style tag
+            // ini untuk mengambil semua class yang dijanjikan 
+            ,existedInStyleTag=groupnum2.match(/\w+-\d+/g)
+          existedInStyleTag?.map(val=>{
+                
+            // val berisi classname utility mt-4 dst
+            // dia adalah penerima 37 class yang dijanjikan oleh developer
+            // apakah dia valid ada di dicts
+            const splitedVal=val.split("-")
+            const resValKey=splitedVal[0]
+            const resVal=splitedVal[1]
+            const resValData=dicts[resValKey]
+            // cari dulu apakah dia ada di styletag [sudah tergenerate sebanyak 37 lewat 37 atau lebih maka dianggap tidak ngefek atau return]
+            //logikanya kalau dia adalah promised class dan dia adalah valid[sudah ada didalam dicts] maka dia sudah dianggap memenuhi syarat | diproses [ditranslate ke css prop:value;]
+            // sebenarnya bisa langsung ditranslate ke regular css property:value; tapi ini untuk mengasah skill problem solving admin karena masih nub
+            // dan juga nanti melakukan cheking di styletag sangat berguna jika untuk mengecek apakah class sudah dibuat di dalam tag ?gunakkan sebagai class atau return agar kode program tidak dieksekusi : buat classnya beserta prop:val; lalu append ke dalam styletag
+                if(resValData == undefined || resVal > 37) return
+
+            // lakukan pengisian di propval | translating utility class into pure css
+
+                propVal+=`${resValData}:${resVal}px;`
+                
+                // sebenarnya untuk mencocokkan dan mengambil promised class di styletag lalu diambil propvalnya | ditranslate jadi pure css tetapi karena sudah dicheck resvalnya maka dia valid merupakkan 37 promised class jadi langsung bisa ditranslate aja  
+                // ekperimental untuk mengasah skill koding admin karena admin agak sedikit nub
+                // check apakah ada classname di dalam style tag
+                const regex2BasedLoop=new RegExp(`\\.${val}`,'g')
+                const searchStyleTag=styleTag.matchAll(regex2BasedLoop)
+                ,result_value=[...searchStyleTag]
+                // jika ketemu ? ![] pakai classnya
+                if(result_value.length > 0){
+                    // console.log("use the class!",result_value)
+                }
+                // !ketemu && length 0 created the class 
+                if(result_value.length < 1){
+                    // console.log("creating class")
+                }
+            // console.log([...searchStyleTag])
+
+          })  
+        // console.log(existedInStyleTag)
+    }
+        // console.log(classnameCounter)
+    //  generateStyle({classname:className,propVal:propVal})
+    // aproved by admin
+    </script>
+</body>
+</html>
