@@ -1,0 +1,175 @@
+js replace to replace value 
+match to match value without change its value 
+    [matchAll,match]
+
+tws look alaike
+dynamic val is *2.5rem*
+
+1 thing is for css that not require dom and 1 is for dom
+
+1.require dom it is like dinamyc value or for dinamic val like pt-*2.5rem* then add to dom element based second[prop object name] of dicts 
+
+2.not require dom at all because it just contain display and css that not require dinamyc value like justify-center etc
+
+intinya di dicts punya 2 nilai yang satu untuk css yang bisa punya value seperti z-index dan yang menerima unit value seperti rem cm dll , dan satunya non unit value seperti position flex display dll ,intinya menyimpan semua css lalu digenerate berdasarkan key value menjadi .key name of dicts objects{
+    dicts[key]:val define by developer;
+}  
+[generate_dictionary]dicts have 2 ,1 for value that can have more than 1 value such as padding:1px until 37; and the classname should based on key of object like idx:"z-index" and become .idx-[x]{z-index:1 until 37;} etc and second properties is for dinamic value ::: non unit is like css that not require value like position or not require value 2 3 4 12px etc
+
+or just place them in array like display [block flex grid inline etc] for value it is in diferent way i think
+
+    p m y x t b l r [solved]
+
+5 color variant generate 10 to 90 like blue-90 etc
+generate class css from 0 to 37 [margin padding] 
+if start with # it should convert it to rgba or hsl ?
+cr-pt-5 
+
+create tag element append it to head and do something-something [solved]
+
+dinamic value just insert it to its element like inline css u know what i mean
+
+check if html tag contain crimsonStyle attr ? dont use prefix : use prefix ?? prefix [cr-/\w+/] [solved]
+====================================lists
+    ===============dinamic val 
+
+    ================non dinamic val
+    display : flex inline 
+=====================
+(Automatic Semicolon Insertion).
+di js otomatis akan meng insert ; diakhir expresi 
+jika parser tidak menganggap baris berikutnya sebagai lanjutan expresi 
+const x=5
+[1,3,5]
+
+maka js akan melihat kode diatas sebagai indexing number maka akan di gabungkan menjadi const x=5[1,3,5] solusinya menggunakkan defensive semicolon ; 
+
+Parser JavaScript
+adalah program yang menguraikan kode JavaScript menjadi struktur yang dapat dipahami oleh komputer, seperti Abstract Syntax Tree (AST). Parser juga bisa merujuk pada fungsi bawaan seperti JSON.parse() yang mengurai string berformat JSON menjadi objek JavaScript
+
+===========rules
+ add dinamic:boolean to identify it is required or not [in order to make 37 predefined class by developer]
+https://www.w3schools.com/cssref/index.php
+https://www.w3schools.com/css/css_text.asp
+==========================css basic
+display 
+color 
+bg 
+position 
+border [solid doted etc]
+box-sizing 
+transition
+z-index
+font [size,family etc]
+height 
+width
+outline
+list [order list etc]
+text transforming upercase lowercase capitalize etc
+pseudo class like :hover 
+
+
+=====================rapi
+dynamic val hanya berlaku untuk yang memiliki value px dll
+**tetapi tidak berlaku jika bisa dimasukkan var() | calc()
+***beri tanda color untuk menandakan 10 to 90 variant
+============layout & box model [vv]
+1.padding [t,b,l,r,inline,block] {dinamic:true,promise:true}
+2.margin [t,b,l,r,inline,block] {dinamic:true,promise:true}
+3.width & height [min,max] {dinamic:true,promise:true}
+4.display [block,inline,inline-block,none] {dinamic:false,promise:false}
+5.Positioning [static , relative , absolute , fixed , sticky] {dinamic:false,promise:false}
+5.1 z-index {dinamic:true,promise:true}
+6.overflow [x y,hidden,auto,scroll] {dinamic:true,promise:false}
+7.box-sizing [content-box,border-box] {dinamic:true,promise:false}
+================typography[vv]
+1.font-size [px rem etc] {dinamic:true,promise:true}
+2.font-weight [100-900,bold,bolder,lighter,unset,initial,inherit,normal] {dinamic:true,promise:false} / fw-10 -  fw-90
+3.font-style [italic,normal,oblique,unset,initial,inherit] {dinamic:true,promise:false} 
+4.line-height [normal,unset,initial,inherit] {dinamic:true,promise:true} 
+5.letter-spacing [normal,unset,initial,inherit] {dinamic:true,promise:true} 
+6.text-align [center,end,justify,left,right,start,unset,initial,inherit] {dinamic:true,promise:false} 
+7.text-transform [uppercase , lowercase , capitalize,none,unset,initial,inherit] {dinamic:true,promise:false} 
+8.text-decoration [underline | line-through | none,unset,initial,inherit] {dinamic:true,promise:false} 
+================colors&bg [v] at num [4] continue later
+1.color [color is generated 10-90 variants] {dinamic:true,promise:false} [color]
+2.background-color [bg-color is generated 10-90 variants] {dinamic:true,promise:false} [color]
+3.background-image [have position[top,bottom,left,right,center,inherit,can accept val like px,% etc],repeat[repeat,no],size[cover,contain]] {dinamic:true,promise:false}
+4.border [have border-radius[can accept dinamic val],border-width[can accept dinamic val],border-style[solid,dashed etc],border-color[10-90] etc],] {dinamic:true,promise:true} [color]
+5.opacity [can accept dinamic val ] {dinamic:true,promise:true} / promised but in percent 0-37 
+6.shadow [it is box shadow accept color x y blur spread radius] {dinamic:true,promise:true} / promised but in px 0-37 [4 value] [color]
+7.transition [transition-property,transition-duration,transition-timing-function] {dinamic:true,promise:false}
+8.transform [skew,rotate,translate] {dinamic:true,promise:true} transform-*skew(95px)* skew,rotate[deg]
+9.visibility [hidden,visible] {dinamic:true,promise:false} 
+10.cursor [pointer , cursor -allowed , default] {dinamic:true,promise:false} 
+
+=====================important rule 
+1.just ask about calc and var it is define the dynamic val based on css style like is it background-color or font-size can accept var or calc functions?? 
+2.which css properties that can accept calc or var function ? make it dinamic val   
+3.global value such as unset,initial,inherit ? make it dinamic val 
+===============menyusul 
+blend mode
+object-fit
+text-shadow
+
+================prompt chatgpt 
+saya ingin membuat library css dengan js mirip tailwind tolong jabarkan css 3 basic non flexbox dan grid
+
+
+dinamyc val 2 is && case
+
+ bg-&clip&-*padding-box*
+ translate to backgroundClip:padding-box;
+
+**dynamic val 1 is ** case
+for shadow u can store it in let var, it can recieve diferent value or props 
+
+
+*extract the classlists then iterate it search dinamic via regex and reploace function js 
+[shadow-*10px 12px 5px 2px*,shadow-blue-90].map(el=>{
+    *take only the dynamic value 
+    ** so it can be /(\w+)*(\s\S)*/
+    * $1 is determine the css props like box-shadow
+    *$2 is determine its value between * 
+    $(el).style.boxShadow=$2
+})
+
+==================research 
+1.check inline css 
+2.check for dom 
+3.decide want to use dom or inline css when handle dinamic value
+4.num 2 and 1 is the same , dom is translating the dom manipulation JavaScript ,to inline css 
+5. i will choose the solution 2[num #2]  because it is so simple to implement 
+6.internal,external,inline wich one is the fast for website load in once request http [internal and inline but for best ux and browser can store/cache it better external css]
+7.tws arbitrary value behind the scene is make inline css through dom or just make it class to prevent duplicate [it create file and store all the class that create depend on the arbitrary val]
+8.when #7 is make it class ?( decide it appear in style tag ? use it[that class] : make it class and append it to style tag):make it inline style using dom manipulation  
+9.prefer conditional true in #8 append using textContext+=val 
+10.i change my mind on num #2 , i will choose #9
+11.so because i choose #9 so i will delete second prop name in dicts maybe
+
+   const dom=document.querySelector(".dom")
+        // solution1 
+        // ? use the var to store value and append to style dom
+            styles="border:2px solid red;color:blue;background:black;"
+        // dom.style="border:4px solid blue;padding:24px;"
+    
+        dom.setAttribute("style",styles)
+
+        // solution 2
+        dom.style["paddingBlock"]="40px"
+        dom.style["paddingInline"]="20px"
+
+            //regex 2
+          const styleapi="text-*#fff* bg-*#ddd* shadow-*blue 2px 2px* bg-*darken*"
+           ,all_match=styleapi.matchAll(/([\w]+)-\*([^*]+)\*/g)
+           ,match=styleapi.match(/([\w]+)-\*([^*]+)\*/g)
+            // ? solution 1 is safe
+           for(const match of all_match){
+
+               console.log(match[2])
+           }
+        //    ? solution 2 is duplicated
+           match.map(match=>{
+                const regex=match.match(/([\w]+)-\*([^*]+)\*/)
+                // console.log(regex[2])
+           })

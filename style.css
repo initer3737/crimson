@@ -1,0 +1,29 @@
+root{
+    --di-none:flex;
+    --blue:blue;
+}
+
+h2{
+    text-decoration:navy wavy underline overline;
+    
+}
+h4{
+    
+    color: darkgoldenrod;
+    /* background: blue url(img/img.jpg) no-repeat;
+    background-size: cover;
+    background-blend-mode: difference; */
+    /* background-size: ; */
+    /* background: ; */
+    /* height: 200px; */
+    /* opacity: 37%; */
+    box-shadow:20px 20px 20px 20px hotpink ;
+    /* transform:translate(37px ,37px) ; */
+    /* transform:translate(62px) ; */
+    /* visibility: ; */
+    
+}
+
+/* .bg-\*blue\*{
+    background-color: blue;
+} */
