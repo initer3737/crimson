@@ -1,4 +1,4 @@
-js replace to replace value 
+js replace is to replace value 
 match to match value without change its value 
     [matchAll,match]
 
