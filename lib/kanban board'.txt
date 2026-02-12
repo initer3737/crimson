@@ -1,3 +1,6 @@
+		
+		PERINGATAN KANBAN BOARD YANG INI UDAH GAK AKU PAKE SEKARANG UDAH MOVE ON KE GITHUB KANBAN BOARD 
+			
 		RULES 
 	1.penamaan kelas menggunakkan cammelcase [nameUganda]	
 	2.penamaan fungsi,variable dan parameter menggunakkan snakecase [name_u]	
@@ -77,11 +80,11 @@
 
 	[DRAWS:#1/CONCLUSION] spesifisity karena urutannya sesuai pengerjaan developer 
 
-		#2.dinval 1
+		#2.dinval 1 [gagal karena dinamic class dengan pola \w-* mt-*24* * tidak bisa dan admin sudah memutuskan untuk pengerjaan dinamic class menggunakkan ^ daripada *]
 
 	[DRAWS:#2/CONCLUSION] kalau menggunakkan filter maka tidak bisa dilakukan kemungkinan karena beberapa data melewati modify dan didalam filter method ?lakukan diluar filter method
 
-	[DRAWS:#2/CONCLUSION] bisa cuman tadi agak kurang fokus memperhatikan kode karena tidak ada trim dan penyesuaian sedikit di classnamenya 
+	[DRAWS:#2/CONCLUSION] bisa cuman tadi agak kurang fokus memperhatikan kode karena tidak ada trim dan penyesuaian sedikit di classnamenya[agak bingung sih jelasinnya gimana tapi kesimpulannya gak bakal dipakai style * untuk pengerjaan dinamic classnya gw pakai ^ sebagai gantinya 
 
 	[DRAWS:#2/CONCLUSION] di styletag itu kosong lalu pas user ngetik misal mt-*24rem* kalau dicheck pake regex gak bisa karena pasti kosong maka dicatch pakai setmap ?cocokkan apakah stylenya tidak ada di catch?tambahkan ke catch dan ke styletag
 
@@ -103,4 +106,4 @@
 		-dia akan menangkap semua termasuk kelass yang belum dinormalisasi nah apakah kita bisa menormalisasi hasil tangkapan dari scandoms lalu diteruskan ke dalam fungsi nah apakah fungsi bisa menormalisasikan hal tersebut atau dengan kata lain merubah struktur dom dari element html tersebut [sangat bisa]
 	2.dinclass 
 		-dinclass simpan di catch agar jika ada yg sama di element yang lain maka jangan di buat
-		-implement fitur ambil yang terakhir untuk dinamic class yang punya nama sama tapi disatu element
+		-implement fitur ambil yang terakhir untuk dinamic class yang tapi disatu element yang sama

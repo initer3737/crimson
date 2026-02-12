@@ -135,6 +135,7 @@ for shadow u can store it in let var, it can recieve diferent value or props
 })
 
 ==================research 
+	UNTUK SEMUA JENIS STYLE BAKAL DIKONVERSI JADI CLASS LALU DI APPEND KE STYLE TAG
 1.check inline css 
 2.check for dom 
 3.decide want to use dom or inline css when handle dinamic value
