@@ -1,0 +1,3 @@
+line 1032
+1001
+1108 waktu console important data di log apakah ini adalah bug 
