@@ -3,3 +3,5 @@ line 1032
 1108 waktu console important data di log apakah ini adalah bug 
 1036 var check register class
 576 root
+802   dinamyc class fn
+320 register utils
