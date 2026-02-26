@@ -5,5 +5,15 @@ line 1032
 576 root
 802   dinamyc class fn
 320 register utils
-
+61 mass translator
+167 adalah 37 defined class by dev terdapat kebocoran regex value
 1028
+910 refactor some code
+179 37 error[v]
+177 penting banget buat validasi jadi error throw[v]
+=========error message has been done recently
+dinclass no duplicate value
+var canvas no duplicate value and insert semicolon warning
+dinval1 no valid sintaks
+37 and 10 variants [v]
+throw error all translator algoritm
