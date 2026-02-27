@@ -6,8 +6,9 @@ line 1032
 802   dinamyc class fn
 320 register utils
 61 mass translator[v]
-167 adalah 37 defined class by dev terdapat kebocoran regex value
+167 adalah 37 defined class by dev terdapat kebocoran regex value[v]
 1028
+1005 console.log dinval 1
 910 refactor some code[v]
 179 37 error[v]
 177 penting banget buat validasi jadi error throw[v]
@@ -17,3 +18,8 @@ var canvas no duplicate value and insert semicolon warning[v]
 dinval1 no valid sintaks
 37 and 10 variants [v]
 throw error all translator algoritm
+37 [v] jika di single element mt-900 eror tapi jika diganti jadi yt-9 gak error
+10 variants[v]
+dinval1 
+dinval2 
+pure css w:; 
