@@ -20,6 +20,6 @@ dinval1 no valid sintaks[v]
 throw error all translator algoritm
 37 [v] jika di single element mt-900 eror tapi jika diganti jadi yt-9 gak error malah jadi silent error [v]
 10 variants[v]
-dinval1 [v]
-dinval2 
+dinval1 [v] * tanpa penutup
+dinval2 & * tanpa dan tanpa penutup *
 pure css w;[v] 

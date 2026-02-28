@@ -1,0 +1,54 @@
+============belajar-markdown dulu biar bisa nulis dokumentasi repository github
+extensi vscode untuk menulis markdown 
+readme.md=markdown
+ctrl+shift+p+markdown
+atau gunakkan aplikasi zettlr untuk menulis markdown
+https://www.zettlr.com/
+
+	-heading 1-6 tergantung jumlah[#]nya, # bla berarti <h1>bla</h1> etc.
+	-horizontal rules[garis bawah[hr] dengan cara underscore 3 kali] ___  
+	-list  
+		ordered  1. html 
+		unorder  - css
+		nested 1. html
+
+			[dienter 2kali lalu di tab 2 kali]
+ 			1.html
+			2.js
+			3.css
+		tasklist
+ 	- [ ] dikasih spasi dikotaknya lalu dikasih spasi
+	- [x] selesai
+-teks style 
+	-italic _js_ 
+	-bold **typescript o like** 
+	-strikethrough ~~has been completed~~
+		-combo _**italic bold**_
+-blockquote
+
+> js is fun language easy to learn
+>> nesting blockquote
+
+-code
+'''javascript
+  console.log("hurray");
+'''
+-inline code ' git commit -m "message" '
+-link [github](https://github.com)
+
+ink reference [bootstrap][1]
+	[1]: https://bootstrap
+	[2]: https://sass
+	[3]: https://tailwind
+[github](https://github.com "link to github") tanda titik dua setelah link ="untuk menampilkan tooltip"
+
+
+-image ![image is corrupted or broken](link)
+
+
+-table
+	| no | nama |
+	|----|------|
+	|1.  |html  |
+
+
