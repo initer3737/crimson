@@ -24,7 +24,7 @@ ___
 
 ___
 
-## ** tech that i use to build this peoject **    
+## **tech that i use to build this peoject**    
    1. javascript 
 ___
 
