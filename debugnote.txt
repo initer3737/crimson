@@ -24,3 +24,18 @@ dinval1 [v] * tanpa penutup [v]
 dinval2 & * tanpa dan tanpa penutup *
 pure css w;[v] 
 line 84
+=====================breakpoints for responsivity
+media(mind-width:25rem){
+
+}
+kalau dia @lg:color-blue-90 
+pakai min-width dan gunakkan rem unit
+kalau semisal ada breakpoint di dinclass maka cari teks yang berformat @lg:color-blue-90 lalu di append ke styletag media query
+lalu dinclassnya hanya berisi yang tidak ada format breakpointnya(@lg:color-blue-90) dan style yang lainnya tidak diperbolehkan untuk masuk di media query untuk seluruh algoritma translator saya expectnya adalah kalau dia tidak akan memasukkan @lg:color-blue-90 maka akan dihandle oleh translator lain yang akan mengececk masing masing format breakpoint dan diappend ke styletag masalahnya adalah untuk setiap translator algoritm dia akan lolos karena @lg: akan lolos di regexnya masing masing dinval karena lg:color-red-90 dia akan dipotong oleh regex jadi color-red-90 lg: tidak ikut serta 
+cara yang terbaik adalah split iterate lalu return jika(/@\w+\:[\w-\d]+/g.test(val)) return disetiap algoritma translator termasuk dinclass karena saya akan membuat fungsi translator_breakpoints untuk setiap masing masing algoritma translator yang bisa memenuhi syarat untuk bisa melakukan breakpoint adalah dinval1 dan dinval2 37predefined class dan 10 variants
+========================code 
+const class_names="@lg:color-red-90 color-red-50 @sm:color-blue-dark"
+class_names.split(/\s+/g).forEach(val=>{
+    if(!/\@(?:sm|lg|xs)/g.test(val))return
+    console.log("nice try dude ",val)
+})
