@@ -21,9 +21,12 @@ throw error all translator algoritm
 37 [v] jika di single element mt-900 eror tapi jika diganti jadi yt-9 gak error malah jadi silent error [v]
 10 variants[v]
 dinval1 [v] * tanpa penutup [v]
-dinval2 & * tanpa dan tanpa penutup *
+dinval2 & * tanpa dan tanpa penutup * [v]
+dinval2 line 139 [v]
 pure css w;[v] 
 line 84
+===============besok 
+implementasi dinval2 di style tag biasa
 =====================breakpoints for responsivity
 media(mind-width:25rem){
 

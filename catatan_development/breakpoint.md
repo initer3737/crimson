@@ -10,7 +10,7 @@ untuk mencegah breakpointnya masuk dan diolah oleh translator
 ```javascript
  const class_names="@lg:color-red-90 color-red-50 @sm:color-blue-dark"
 class_names.split(/\s+/g).forEach(val=>{
-    if(!/\@(?:sm|lg|xs)/g.test(val))continue
+    if(!/\@(?:sm|lg|xs)/g.test(val))return
     console.log("nice try dude ",val)
 })
 
@@ -42,8 +42,24 @@ class_names.split(/\s+/g).forEach(val=>{
 ```
 
 ```
+** kalau ada for iteration non higher order function maka gunakkan continue keyword **
 
----
- 
+
+ ```javascript
+   const validate_regex_dinval1=/([\w]+)-\*\s*([^*]+)\s*\*/g
+        let dinamicVal = g2.split(/\s+/g)//.matchAll(validate_regex_dinval1)]
+    for (const result of dinamicVal) {
+        // console.log("result all dynamic val ",result[0])
+        // ?check for 2 dinamic | insert dinamicval
+           // console.log("before regexed ",result)
+          if(!/^\w+-\*\s*[^*]+\s*\*$/g.test(result))continue
+         // console.log("result ",result)
+          const resultat = [...result.matchAll(validate_regex_dinval1)][0]
+        if(resultat.length === 0) continue
+            console.log(resultat)
+       //return
+       }
+
+```
 
 
