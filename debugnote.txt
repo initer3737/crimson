@@ -25,8 +25,9 @@ dinval2 & * tanpa dan tanpa penutup * [v]
 dinval2 line 139 [v]
 pure css w;[v] 
 line 84
+implementasi dinval2 di style tag biasa[v]
 ===============besok 
-implementasi dinval2 di style tag biasa
+breakpoint
 =====================breakpoints for responsivity
 media(mind-width:25rem){
 
