@@ -28,6 +28,8 @@ line 84
 implementasi dinval2 di style tag biasa[v]
 ===============besok 
 breakpoint
+make template and do some research in order to learn about media query stuf
+prevent breakpoint type class to enter in some translator algoritm or fiture
 =====================breakpoints for responsivity
 media(mind-width:25rem){
 
