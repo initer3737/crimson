@@ -61,5 +61,17 @@ class_names.split(/\s+/g).forEach(val=>{
        }
 
 ```
+## sebuah solusi untuk replace yang mudah
+```javascript
+const target="bg-blue{ss  vv}"
+       let pt=target.replace(/(\w+-\w+)\{([^}]+)\}/,(full_str,p1,p2,offset,string)=>{
+           const replaced=`${p1}{${p2+" omoshiroi desu"}}`
+           return replaced
+       })
+        
 
-
+console.log(pt)
+```
+### mengerjakkan fitur breakpoint misal md:red-90
+> dipecah dengan regex menjadi [md,red-90]
+> lalu di pecahkan dengan mass translator lalu tambahkan class BreakpointTranslatorAlgoritm didalamnya reuse lagi fungsi yang ada di dalam mass translator agar menghemat waktu tetapi didalam class BreakpointTranslatorAlgoritm di kustom pakai regex agar lebih mudah di oprek lagi 
