@@ -34,8 +34,8 @@ class Breakpoints{
   #strict_checker_breakpoint
   #catchs
   constructor(){
-    this.breakpoint_regex=/@\:?\S+/g
-    this.#strict_checker_breakpoint=/@\:\S+/g
+    this.breakpoint_regex=/@[\w]{2,2}\:?\S+/g
+    this.#strict_checker_breakpoint=/@[\w]{2,2}\:\S+/g
     this.#catchs=this.#catch_data.generateCatch()
   }
 
@@ -48,7 +48,7 @@ class Breakpoints{
   /**
    * @desc kalau dia breakpoint[@md:color-blue-90] maka return, prevent breakpoint class to enter 
    */
-  prevent_breakpoint({class_name}){
+  prevent_breakpoint_only({class_name}){
       this.#breakpoint_error_checker({class_name})
       return this.breakpoint_regex.test(class_name)
   }
@@ -56,7 +56,7 @@ class Breakpoints{
   /**
    * @desc kalau dia bukan breakpoint maka return , prevent non breakpoint class type to enter aka break point class type can enter
    */
-  includes_breakpoint({class_name}){
+  includes_breakpoint_only({class_name}){
       this.#breakpoint_error_checker({class_name})
       return !this.breakpoint_regex.test(class_name)
   }
